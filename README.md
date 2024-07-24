@@ -3,70 +3,68 @@
 
 ## Email Notifier for Discord
 
-Hey there! Here’s how to get your Email Notifier for Discord up and running.
+Welcome! Here’s a quick guide to getting your Email Notifier for Discord up and running.
 
 ### 1. Clone the Repository
 
-First, grab the code from GitHub. Open your terminal and run:
+Start by cloning the repository from GitHub. Open your terminal and run:
 
 ```bash
 git clone https://github.com/Rfkgaming89/discord-email-notification.git
 cd discord-email-notification
 ```
 
-Switch to the `docker` branch with:
+Then switch to the `docker` branch with:
 
 ```bash
 git checkout docker
 ```
 
-### 2. Configure the `.env` File
+### 2. Set Up the `.env` File
 
-You need to set up your environment variables. Copy the example file:
+You’ll need to configure your environment variables. First, copy the example file:
 
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` to include your IMAP server details, email account, password, Discord token, guild ID, and channel ID.
+Open `.env` and add your IMAP server details, email credentials, Discord token, guild ID, and channel ID.
 
-### 3. Build and Run the Docker Container
+### 3. Build and Start the Docker Container
 
-Now, let’s build and start the Docker container:
+Next, build and launch the Docker container with:
 
 ```bash
 docker-compose up --build
 ```
 
-Docker will handle the rest. It may take a moment, so hang tight.
+This will take care of setting everything up. It might take a few moments, so please be patient.
 
-### 4. Verify It’s Working
+### 4. Check Everything’s Running Smoothly
 
-Check if your container is running:
+To ensure your container is up and running, use:
 
 ```bash
 docker ps
 ```
 
-To view logs, use:
+To view logs and troubleshoot any issues, run:
 
 ```bash
 docker-compose logs
 ```
 
-This will show you any activity or errors. 
+### 5. Stopping the Container
 
-### 5. Stop the Container
-
-When you’re done, stop everything with:
+When you’re finished, you can stop the container with:
 
 ```bash
 docker-compose down
 ```
 
-### 6. Updating
+### 6. Updating the Setup
 
-If you make changes and need to update, rebuild with:
+If you need to update the setup or make changes, rebuild with:
 
 ```bash
 docker-compose build
@@ -78,6 +76,10 @@ Then restart it with:
 docker-compose up
 ```
 
-Feel free to reach out if you have questions or run into issues. Enjoy the setup!
+### 7. Python Setup Instructions
+
+For details on running the Email Notifier for Discord using Python, please check out the [main GitHub repository](https://github.com/Rfkgaming89/discord-email-notification) and refer to the Python setup section.
+
+Feel free to reach out if you have any questions or run into any issues. Enjoy your setup!
 
 ---
