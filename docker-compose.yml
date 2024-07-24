@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  discord_email_bot:
+    image: python:3.8-slim
+    container_name: discord_email_bot
+    env_file:
+      - .env
+    volumes:
+      - ./DiscordEmail.py:/app/DiscordEmail.py
+      - ./processed_emails.txt:/app/processed_emails.txt
+      - ./thread_id.txt:/app/thread_id.txt
+      - ./attachments:/app/attachments
+    working_dir: /app
+    command: python3 DiscordEmail.py
