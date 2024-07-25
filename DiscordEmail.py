@@ -4,6 +4,10 @@ import imaplib
 import email
 import os
 from discord.ext import commands
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Email settings
 IMAP_SERVER = os.getenv('IMAP_SERVER')
@@ -30,8 +34,8 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Define your guild and channel IDs
 GUILD_ID = int(os.getenv('GUILD_ID'))
-EMAIL_CHANNEL_ID = 000000000000000000
-COUNTDOWN_CHANNEL_ID = 00000000000000
+EMAIL_CHANNEL_ID = int(os.getenv('EMAIL_CHANNEL_ID'))
+COUNTDOWN_CHANNEL_ID = int(os.getenv('COUNTDOWN_CHANNEL_ID'))
 
 # Adjusted intervals
 EMAIL_CHECK_INTERVAL = 1800  # Email check interval in seconds (30 minutes)
